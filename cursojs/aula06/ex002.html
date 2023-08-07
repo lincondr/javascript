@@ -19,16 +19,26 @@
         p {
             font-size: 18px;
         }
+
+        div {
+            background-color: red;
+            height: 300px;
+            width: 300px;
+            padding: 20px;
+        }
     </style>
 </head>
 
 <body>
     <h1>Ola, Mundo</h1>
-    <p>hello, there</p>
-
+    <p>hello, there!</p>
     <script>
-        var nome = window.prompt('Qual é seu nome');
-        alert('Ola, '+ nome);
+         var nome = prompt('Digite seu nome: ')
+         alert('Digite dois numeros a seguir que resultem na sua idade!')
+         var n1 = Number.parseInt(prompt('Digite o primeiro numero: '))
+         var n2 = Number.parseInt(prompt('Digite o segundo numero: '))
+         var soma = n1 + n2
+         document.write(`<div> Bem vindo ${nome.toLocaleUpperCase()} pelos meus calculos sua idade é exatamente ${soma} </div>`)
     </script>
 </body>
 

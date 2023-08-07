@@ -28,8 +28,10 @@
         // document.write(`Seu nome em maiusculo se escreve é ${nome.toUpperCase()} </br>`);
         // document.write(`Seu nome em minusculo se escreve ${nome.toLowerCase()}`);
 
-        var name = prompt('What is your name: ');
-        document.write(`<div>Your name is ${name.toUpperCase()}</div>`);
+        var nome = prompt('qual seu nome: ')
+        document.write(`Ola, ${nome}! Seu nome tem ${nome.length} letras`)
+        document.write(`Seu nome em maisculas é ${nome.toLocaleUpperCase()}`)
+        document.write(`Seu nome em minusculas é ${nome.toLocaleLowerCase()}`)
     </script>
 </body>
 </html>
