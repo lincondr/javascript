@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nacionalidades</title>
+    <title>Document</title>
 </head>
-
 <body>
-    <h1>Where are you from?</h1>
-    <input type="text" name="txtc" id="txtc">
+    <h1>How old are you?</h1>
+    <input type="number" name="txtyo" id="txtyo" min="1" value="1">
+    <!-- <h1>De onde você é?</h1>
+    <input type="text" name="txtyc" id="txtyc" placeholder="Pais" > -->
     <input type="button" value="Send" onclick="clicar()">
-    <div id="country">
+    <div id="res">
 
     </div>
-
     <script>
+        // function clicar() {
+        //     // var tyc = document.getElementById('txtyc')
+        //     // var res = document.getElementById('res')
+        //     // var yc = (tyc.value)
+        //     // res.innerText = document.write(`Voce é do ${yc}!`)
+        //     // if (yc == 'Brasil' && yc != 'EUA') {
+        //     //     res.innerText = document.write(`Voce é brasileiro`)
+        //     // } else {
+        //     //     res.innerText += document.write(`<p>Voce é estrangeiro</p>`)
+        //     // }
+        // }
         function clicar() {
-            var loc = document.getElementById('txtc')
-            var ctr = getElementById('country')
-            var location = (loc.value)
-            if (loc == 'Brasil') {
-                write('Voce é brasileiro')
+            var tyo = document.getElementById('txtyo')
+            var res = document.getElementById('res')
+            var yo = Number(tyo.value)
+            var calc = 2022 - yo
+            res.innerText = document.write(`Voce nasceu em ${calc}`)
+            res.innerText += document.write(`<p>Você tem exatamente ${yo} Anos de idade</p>`)
+            if (yo >= 18 && yo <= 30) {
+                res.inner += document.write(`Você é um jovem adulto`)
+            }
+            if (yo >= 12 && yo <=16 ) {
+                res.inner += document.write(`Você é um adolescente`)
             }
         }
     </script>
 </body>
-
 </html>
