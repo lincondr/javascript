@@ -1,7 +1,7 @@
 var a = 10
-a += 10
+a *= 10
 for(b = a; b > 0; b--) {
-    do {
+    while(b > 10) {
         console.log(b)
-    } while(b > 10)
+    }
 }
