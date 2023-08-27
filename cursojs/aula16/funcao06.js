@@ -1,9 +1,11 @@
-let bag = [5, 4, 9, 10]
-let maiorNumero =  bag[0]
-for(let c = 1; c < bag.length; c++){
-    if (bag[c] > maiorNumero) {
-        maiorNumero = bag[c]
+let several = [2, 1, 20, 9, 11]
+
+function isThere(n) {
+    if (several.indexOf(n) != -1) {
+        return 'There is a number'
+    } else {
+        return 'there is not a number'
     }
 }
 
-console.log(maiorNumero)
+console.log(isThere(21))
