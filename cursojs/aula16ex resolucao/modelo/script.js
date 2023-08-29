@@ -67,5 +67,6 @@ function limpar() {
         alert('A lista nao possui nenhum valor')
     } else {
         lista.length = ''
+        res.innerHTML = ''
     }
 }
