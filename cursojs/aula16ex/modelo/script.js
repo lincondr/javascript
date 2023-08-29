@@ -1,45 +1,78 @@
 //O programa deve adicionar numeros a um select e um array, depois fazer verificaçoes com esses determinados valores
 
 /* verificar se o numero é invalido */
-let num = document.getElementById('txtnum')
-let tab = document.getElementById('selist')
-let vagas = []
-let res = document.getElementById('res')
-function adicionar() {
-    if (num.value.length == 0) {
-        window.alert('Numero invalido')
-    } else {/* verificar se esta entre 1 a 100, Adicionar os valores ao select/array */
-        let n = (num.value)
-        if (n > 0 && n <= 100) {
-            let item = document.createElement('option')
-            item.text = `${n}`
-            tab.appendChild(item)
-            vagas.push(n)
-        } else {
-            window.alert('Numero invalido')
-        }
+let num = document.querySelector('input#txtnum')
+let lista = document.querySelector('select#selist')
+let res = document.querySelector('div#res')
+let valores = []
+
+function isNumber(n) {
+    if (Number(n) > 0 && Number(n) <= 200) {
+        return true
+    } else {
+        return false
     }
 }
 
-/* fazer verificaçoes com esses valores armazenados no array */
-function finalizar() {
-    if (vagas == 0) {
-        alert('Insira os dados necessarios')
+function isThere(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
     } else {
-        res.innerHTML += `<p>Ao todo, temos ${vagas.length} numeros cadastrados</p>`
-        let last = vagas[0]
-        for (let c = 1; c < vagas.length; c++) {
-            if (vagas[c] > last) {
-                last = vagas[c]
-            }
+        return false
+    }
+}
+
+function disparaComEnter(event) {
+    if (event.key == 'Enter') {
+        adicionar()
+    }
+}
+
+function adicionar() {
+    if (isNumber(num.value) && !isThere(num.value, valores)) {
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `Number ${num.value} Included`
+        lista.appendChild(item)
+        res.innerHTML = ''
+    } else {
+        alert('Incorrect Number or Number alredy exist!')
+    }
+    num.value = ''
+    num.focus()
+}
+
+function finalizar() {
+    let len = valores.length
+    let menor = valores[0]
+    let maior = valores[0]
+    let media = 0
+    let soma = 0
+    for (let seq in valores) {
+        if (valores[seq] > maior) {
+            maior = valores[seq]
         }
-        res.innerHTML += `<P>O maior numero é ${last}</P>`
-        let menor = vagas[0]
-        for(let cm = 1; cm < vagas.length; cm++) {
-            if(vagas[cm] < menor)
-            menor = vagas[cm]
+        if (valores[seq] < menor) {
+            menor = valores[seq]
         }
-        res.innerHTML += `<p>O menor numero é ${menor}</p>`
+        soma += valores[seq]
+    }
+    media = soma / len
+
+    res.innerHTML = ''
+    res.innerHTML += `<p>We've got ${len} numbers</p>`
+    res.innerHTML += `<p>The larger number is ${maior}</p>`
+    res.innerHTML += `<p>The smaller number is ${menor}</p>`
+    res.innerHTML += `<p>The average is ${media}</p>`
+    res.innerHTML += `<p>The total is ${soma}</p>`
+}
+
+function reset() {
+    if (lista.length == 0) {
+        alert('No data')
+    } else {
+        lista.length = ''
+        res.innerHTML = ''
     }
 
 }

@@ -10,23 +10,22 @@
 
 <body>
     <header>
-        <h1>Title</h1>
+        <h1>Analisador de Numeros</h1>
     </header>
     <section>
-        <div>Numero (entre 1 a 100):
-            <input type="number" name="txtnum" id="txtnum">
+        <div>Numbers (from 1 to 200):
+            <input type="number" name="txtnum" id="txtnum" onkeydown="disparaComEnter(event)">
             <input type="button" value="Adicionar" onclick="adicionar()">
+            <select name="select" id="selist" size="6" ></select> <br>
+            <input type="button" value="finalizar" onclick="finalizar()">
+            <input type="button" value="Resetar" onclick="reset()">
         </div>
         <div id="res">
-            <select name="select" id="selist" size="6" >
-               <option>Adicione numeros</option>
-            </select> <br>
-            <input type="button" value="finalizar" onclick="finalizar()">
-           
+            
         </div>
     </section>
     <footer>
-        <p>&copy; CursoemVideo</p>
+        <p>&copy; CursoemVideo // feito por Lincon</p>
     </footer>
 
     <script src="script.js"></script>
