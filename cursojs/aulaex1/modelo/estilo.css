@@ -1,30 +1,38 @@
-@charset "UTF-8";
-
-body {
-    background-color: rgb(70, 142, 236);
-    font: normal 15px Arial;
-}
-
-header {
-    color: white;
-    text-align: center;
-}
-
-section {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 500px;
+#area {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
     margin: auto;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
 }
 
-select {
+.number {
+    background-color: lawngreen;
     width: 150px;
+    height: 150px;
+    margin: 5px;
 }
 
-footer {
-    text-align: center;
+.number:hover {
+    background-color: rgb(59, 117, 0);
     color: white;
-    font-style: italic;
+    transition: 0.3s;
+    font-weight: bold;
 }
+
+p {
+    padding-top: 40px;
+    text-align: center;
+}
+
+#res {
+    padding: 10px;
+    margin: 40px auto;
+    height: 100px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+#selist {
+    width: 300px;
+}
+
