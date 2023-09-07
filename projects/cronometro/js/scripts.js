@@ -20,7 +20,6 @@ resetBtn.addEventListener('click', resetTimer)
 
 function startTimer() {
     interval = setInterval(() => {
-        console.log('funcionou')
         if (!isPaused) {
             miliseconds += 10;
             
