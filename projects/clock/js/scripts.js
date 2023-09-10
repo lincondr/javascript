@@ -1,7 +1,8 @@
+let title = document.getElementById('title')
 const onBtn = document.querySelector('#startBtn')
 const pauseBtn = document.querySelector('#pauseBtn')
 const resumeBtn = document.querySelector('#resumeBtn')
-
+const resetBtn = document.querySelector('#resetBtn')
 
 
 function updateTime() {
@@ -15,7 +16,7 @@ function updateTime() {
     dayTime(hour);
 }
 
-let title = document.getElementById('title')
+
 
 function dayTime(time) {
     if (time < 12) {
@@ -30,14 +31,45 @@ function dayTime(time) {
         document.body.style.background = '#0a2238;'
         title.innerHTML = ''
         title.innerHTML += `<p>GOOD NIGHT</p>`
-    }   
-}
-
-const timeRunning = false
-onBtn.addEventListener('click', startTimer)
-    
-function startTimer() {
-    if(!timeRunning) {
-        interval = setInterval(updateTime, 1000)
     }
 }
+
+let timeRunning = false
+onBtn.addEventListener('click', startTimer)
+pauseBtn.addEventListener('click', pauseTimer)
+resumeBtn.addEventListener('click', resumeTimer)
+resetBtn.addEventListener('click', resetTimer)
+
+function startTimer() {
+    if (!timeRunning) {
+        interval = setInterval(updateTime, 1000)
+
+        timeRunning = true
+        startBtn.style.display = 'none'
+        pauseBtn.style.display = 'block'
+    }
+}
+
+function pauseTimer() {
+    if (timeRunning) {
+        clearInterval(interval);
+    }
+
+    timeRunning = false
+    pauseBtn.style.display = 'none'
+    resumeBtn.style.display = 'block'
+
+    document.body.style.background = '#0a2238'
+    title.innerText = 'What time is it now'
+}
+
+function resumeTimer() {
+    if (!timeRunning) {
+        startTimer()
+
+        resumeBtn.style.display = 'none'
+        pauseBtn.style.display = 'block'
+        timeRunning = true
+    }
+}
+

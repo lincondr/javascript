@@ -34,11 +34,16 @@ h1 {
 }
 
 #controls {
-    margin: 25px auto;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+#pauseBtn,
+#resumeBtn {
+    display: none;
 }
 
 .button {
