@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head> 
+<body>
+    <div id="content">
+        <header>
+            <h1 id="title">Write a Number</h1>
+        </header>
+            <div id="form">
+                <p class="main-input">Write a number <strong>(1 to 200):</strong> <input type="number" id="txtnum"></p>
+                <div id="buttons-control">
+                    <button class="button" id="sendBtn">
+                        Send
+                    </button>
+                    <button class="button" id="clearBtn">
+                        Clear
+                    </button>
+                    
+                </div>
+            </div>
+            <div id="sel-content">
+                <select id="select" size="8"></select>
+                <button class="button" id="showBtn">
+                    Show Results
+                </button>
+            </div>
+            <div id="results"></div>
+    </div>
+</body>
+</html>
