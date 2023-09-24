@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Readear</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+
+        #content {
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #controls {
+            padding: 8px;
+        }
+
+        #results,
+        #controls {
+            width: 350px;
+            margin: auto;
+        }
+
+        #controls p {
+            padding: 5px;
+        }
+
+        #results {
+            text-align: left;
+
+        }
+
+        #sendBtn {
+            padding: 2px 8px;
+        }
+
+        #results #select {
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div id="content">
+        <h1 id="Title">Tell us your name</h1>
+        <div id="controls">
+            <label for="txtn">Write a name </label><input type="text" id="txtn" required size="20" placeholder="Michael Steve Jordan">
+            <input id="sendBtn" type="button" value="Send">
+        </div>
+        <div id="results">
+            <select id="select" size="10"></select>
+        </div>
+    </div>
+</body>
+
+</html>
