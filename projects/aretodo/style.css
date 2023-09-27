@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(128, 128, 128);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 44, 44);
+    border-radius: 12px;
+    width: 450px;
+    margin: auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#form-intel {
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+
+#form-intel h3 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+#form-intel #todo-form{
+    padding-bottom: 8px;
+}
+
+#input-todo {
+    height: 26px;
+}
+
+#edit-todo {
+    height: 26px;
+}
+
+.todo h3 {
+    font-size: 14px;
+}
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: rgb(92, 92, 92);
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;   
+    margin-bottom: 10px;
+}
+
+.todo.done h3 {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.button {
+    padding: 2px;
+    width: 70px;
+    height: 30px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}

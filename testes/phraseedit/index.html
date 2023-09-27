@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header><h1>PHRASE EDITOR</h1></header>
+    <div id="container">
+        <section id="form-intel">
+            <h3>Write anything</h3>
+            <form id="todo-form">
+                <input type="text" id="input-todo">
+                <button id="sendBtn" type="submit" class="button">SEND</button>
+                <button id="clearBtn" class="button">CLEAR</button>
+            </form>
+            <form id="edit-form" class="hide">
+                <input type="text" id="edit-todo">
+                <button id="send-edit" type="submit" class="button">CHANGE</button> <br>
+                <button id="cancelBtn" class="button">CANCEL</button> 
+            </form>
+        </section>
+        <section id="todo-list">
+            <div class="todo">
+                <h3 id="title-todo">Example text</h3>
+                <button class="button editBtn">EDIT</button>
+                <button class="button removeBtn">REMOVE</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
