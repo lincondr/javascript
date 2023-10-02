@@ -1,5 +1,3 @@
-
-
 let offToOn = () => {
     let button = "OFF";
     console.log(button)
